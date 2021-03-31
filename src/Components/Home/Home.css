@@ -1,0 +1,12 @@
+.allCover{
+    /* margin-left: 30px;
+    margin-top: 50px;
+    border-radius:10px;
+    border: 1px solid rgb(226, 219, 219);
+    background: rgb(211, 208, 208);
+    height: 410px;
+    width: 265px; */
+    display: flex;
+    margin-left: 150px;
+    padding: spacing 50px;
+}

@@ -1,0 +1,27 @@
+.bookStyle{
+    margin-left: 30px;
+    margin-top: 20px;
+    border-radius: 10px;
+    height: 270px;
+    width: 200px;
+    background: rgb(238, 235, 235);
+    display: felx;
+    
+}
+.bookStyle img{
+    margin-top: 30px;
+    margin-left: 30px;
+    margin-bottom: 15px;
+}
+.button{
+
+    display: flex;
+    padding: 0 20px;
+}
+button{
+    border: none;
+    background: rgb(42, 104, 104);
+    border-radius:5px;
+    color: black!important;
+   margin-left: 30px;
+}
