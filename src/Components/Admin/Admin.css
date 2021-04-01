@@ -1,0 +1,36 @@
+.adminSection{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+.sideNav{
+    background: rgb(81, 86, 93);
+    color: white ;
+}
+.sideNav h2, p{
+    text-align: center;
+  
+}
+.sideNav button{
+    text-align:center;
+    display: block;
+    width: 70%;
+    line-height: 50px;
+    background: transparent !important;
+}
+input{
+    outline: none;
+    margin: 10px 10px;
+    
+}
+.formInput{
+   margin-top: 60px;
+    height: 12vh;
+    display: grid;
+    grid-template-columns: 2fr 2fr;
+   
+}
+.submitBtn{
+    margin-top: 80px;
+    margin-left: 950px ;
+}

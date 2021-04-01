@@ -43,7 +43,7 @@ function App() {
           <Route path="/order">
             <Orders />
           </Route>
-          <Route path="/">
+          <Route exact path="/">
             <Home />
           </Route>
         </Switch>
