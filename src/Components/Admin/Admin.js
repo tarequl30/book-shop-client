@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from 'react';
 import './Admin.css'
 import Form from './Form/Form';
-import Table from './Table/Table';
+import Tables from './Table/Tables';
 
 const Admin = () => {
     const [showForm, setShowForm] = useState(true);
@@ -17,7 +17,7 @@ const Admin = () => {
                 </nav>
             </div>
             {
-                showForm ? <Form></Form> : <Table />
+                showForm ? <Form></Form> : <Tables />
             }
         </section>
     );

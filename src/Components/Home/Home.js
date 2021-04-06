@@ -1,47 +1,21 @@
 import React, { useEffect, useState } from 'react';
-import image from '../../icons/darkcover.jpg'
 import './Home.css'
 import Buy from '../Buy/Buy';
 
 
 const Home = () => {
-    const [books, setBooks] = useState()
+    const [books, setBooks] = useState([])
 
     useEffect(()=>{
         fetch('http://localhost:5000/books')
         .then(res => res.json())
         .then(data => setBooks(data))
     }, [])
-//     const books = [
-//     {
-//         name: "Dark Cover",
-//         image: image,
-//         author: 'jhon smith',
-//         price: 200
-//     },
-//     {
-//         name: "Dark Cover",
-//         image: image,
-//         author: 'jhon smith',
-//         price: 200
-//     },
-//     {
-//         name: "Dark Cover",
-//         image: image,
-//         author: 'jhon smith',
-//         price: 200
-//     },
-//     {
-//         name: "Dark Cover",
-//         image: image,
-//         author: 'jhon smith',
-//         price: 200
-//     }
-// ]
+
     return (
         <div className="allCover">
            {
-               books.map(books => <Buy book={books}></Buy>)
+              books.map(books => <Buy book={books}></Buy>)
            }
         </div>
     );

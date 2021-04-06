@@ -4,9 +4,9 @@
     border-radius: 10px;
     height: 270px;
     width: 200px;
-    background: rgb(238, 235, 235);
-    display: felx;
-    
+    background: rgb(97, 62, 62);
+    /* display: flex; */
+    /* grid-template-columns: repeat(3, 1fr); */
 }
 .bookStyle img{
     margin-top: 30px;
@@ -14,7 +14,6 @@
     margin-bottom: 15px;
 }
 .button{
-
     display: flex;
     padding: 0 20px;
 }
