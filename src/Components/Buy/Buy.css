@@ -1,26 +1,42 @@
-.bookStyle{
-    margin-left: 30px;
-    margin-top: 20px;
-    border-radius: 10px;
-    height: 270px;
-    width: 200px;
-    background: rgb(97, 62, 62);
-    /* display: flex; */
-    /* grid-template-columns: repeat(3, 1fr); */
+.buy-now-button {
+    font-weight: bold;
+    color: white;
+    background: #3b6375;
 }
-.bookStyle img{
-    margin-top: 30px;
-    margin-left: 30px;
-    margin-bottom: 15px;
-}
-.button{
-    display: flex;
-    padding: 0 20px;
-}
-button{
+
+.price {
     border: none;
-    background: rgb(42, 104, 104);
-    border-radius:5px;
-    color: black!important;
-   margin-left: 30px;
+    background: none;
+    font-weight: 900;
+    color: black;
+    cursor: default !important;
 }
+
+/* @media screen and (max-width: 1200px) {
+    #home-section {
+        margin: 2em 10em;
+        grid-gap: 1em;
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+@media screen and (max-width: 864px) {
+    #home-section {
+        margin: 2em 7em;
+        grid-gap: 1em;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width: 680px) {
+    #home-section {
+        margin: 2em 2em;
+        grid-gap: 1em;
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media screen and (max-width: 410px) {
+    #home-section {
+        margin: 2em 2em;
+        grid-gap: 1em;
+        grid-template-columns: repeat(1, 1fr);
+    }
+} */

@@ -34,3 +34,8 @@ input{
     margin-top: 80px;
     margin-left: 950px ;
 }
+.buy-now-button{
+    font-weight: bold;
+    color: white;
+    background: #5b737e;
+}

@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
@@ -7,12 +6,11 @@ import TableRow from './TableRow';
 
 const Tables = ({book}) => {
     const [books, setBooks] = useState([])
-
     useEffect(()=>{
         fetch('http://localhost:5000/books')
         .then(res => res.json())
         .then(data => setBooks(data))
-    }, [])
+    }, [books])
     return (
         <Table striped bordered hover>
             <thead>

@@ -1,14 +1,10 @@
 import './App.css';
-import logo from './icons/book.jpg'
 import {
   BrowserRouter as Router,
   Switch,
   Route
 } from "react-router-dom";
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-// import { Form, FormControl, Nav, Navbar, NavDropdown } from 'react-bootstrap';
-// import { Button } from 'bootstrap';
 import Home from './Components/Home/Home';
 import Login from './Components/Login/Login';
 import Admin from './Components/Admin/Admin';
@@ -16,7 +12,6 @@ import Orders from './Components/Orders/Orders';
 import Navbars from './Components/Navbar/Navbars'
 import { createContext } from 'react';
 import { useState } from 'react';
-
 
 export const UserContext = createContext()
 function App() {
@@ -39,7 +34,7 @@ function App() {
           <Route path="/login">
             <Login />
           </Route>
-          <Route path="/order">
+          <Route path="/orders">
             <Orders />
           </Route>
           <Route exact path="/">

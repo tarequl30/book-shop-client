@@ -1,43 +1,41 @@
 
 import React from 'react';
 import { Card } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import './Buy.css'
+import "bootstrap/dist/css/bootstrap.min.css"
 
 const Buy = ({book}) => {
+  const handleOrder = ( imageUrl, bookName, price) => {
+    const order = {
+      bookName,
+      imageUrl,
+      price
+    }
+    console.table(order)
+  }
+  
     return (
-        // <div className="bookStyle">
-        //         <img src={book.imageUrl} alt="" width="70%"/>
-        //         <h5>{book.bookName}</h5>
-        //         <p><small>{book.authorName}</small></p>
-        //     <div className="button">
-        //         <h5>${book.price}</h5> <button>Buy Now</button>
-        //     </div>
-        // </div>
-        <Card>
-        <Card.Img variant="top" src={book.imageUrl} alt="" />
-        <Card.Body>
-          <Card.Title>{book.bookName}</Card.Title>
-          <Card.Text>
-          <p><small>{book.authorName}</small></p>
-          </Card.Text>
-        </Card.Body>
-        <Card.Footer>
-          <small className="text-muted">${book.price} <button>Buy Now</button></small>
-        </Card.Footer>
-      </Card>
-    //    <Card>
-    //    <Card.Img variant="top" src="holder.js/100px160" />
-    //    <Card.Body>
-    //      <Card.Title>Card title</Card.Title>
-    //      <Card.Text>
-    //        This is a wider card with supporting text below as a natural lead-in to
-    //        additional content. This content is a little bit longer.
-    //      </Card.Text>
-    //    </Card.Body>
-    //    <Card.Footer>
-    //      <small className="text-muted">Last updated 3 mins ago</small>
-    //    </Card.Footer>
-    //  </Card>
+      <Card>
+            <Card.Img variant="top" src={book.imageUrl} />
+            <Card.Body className="d-flex flex-column p-2">
+                <div className="mt-auto">
+                    <Card.Title className="m-0">{book.bookName}</Card.Title>
+                    <small>{book.authorName}</small>
+                    <div className="d-flex justify-content-between">
+                        <Link to="/orders">
+                            <button
+                                onClick={() => handleOrder(book.imageUrl, book.bookName, book.price)}
+                                className="d-block mt-3 btn buy-now-button"
+                            >
+                                Buy Now
+                            </button>
+                        </Link>
+                        <button className="d-block mt-3 price">${book.price}</button>
+                    </div>
+                </div>
+            </Card.Body>
+        </Card>
     );
 };
 
