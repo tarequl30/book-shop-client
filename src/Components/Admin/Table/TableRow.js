@@ -9,14 +9,14 @@ const TableRow = ({book}) => {
         .then(result => console.log(result))
     }
     return (
-        <div>
-             {<tr>
-                <td>{book.bookName}</td>
+       
+             <tr>
+                <td>{book.name}</td>
                 <td>{book.authorName}</td>
                 <td>{book.price}</td>
                 <td><button onClick={() => handleDelete(book._id)} > <img src={deleteBtn} width="20px" alt=""/></button></td>
-                </tr>}
-        </div>
+            </tr>
+        
     );
 };
 

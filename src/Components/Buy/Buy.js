@@ -6,13 +6,22 @@ import './Buy.css'
 import "bootstrap/dist/css/bootstrap.min.css"
 
 const Buy = ({book}) => {
-  const handleOrder = ( imageUrl, bookName, price) => {
+  const handleOrder = (bookName, price) => {
     const order = {
       bookName,
-      imageUrl,
       price
     }
     console.table(order)
+    fetch("http://localhost:5000/takeOrder/", {
+            method: "post",
+            headers: {
+                "Content-Type": "application/json",
+                Accept: "application/json",
+            },
+            body: JSON.stringify(order)
+        })
+        .then(res => res.json())
+        .then(result => console.log(result))
   }
   
     return (
@@ -25,7 +34,7 @@ const Buy = ({book}) => {
                     <div className="d-flex justify-content-between">
                         <Link to="/orders">
                             <button
-                                onClick={() => handleOrder(book.imageUrl, book.bookName, book.price)}
+                                onClick={() => handleOrder(book.name, book.price)}
                                 className="d-block mt-3 btn buy-now-button"
                             >
                                 Buy Now
