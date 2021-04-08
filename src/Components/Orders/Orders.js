@@ -11,7 +11,7 @@ const Orders = () => {
         fetch('http://localhost:5000/getOrder')
     .then(res => res.json())
     .then(data => setOrder(data))
-    }, [])
+    }, [order])
     return (
     <Table striped bordered hover>
         <thead>
@@ -19,6 +19,7 @@ const Orders = () => {
             <th>Description</th>
             <th>Quantity</th>
             <th>Price</th>
+            <th>Remove</th>
             </tr>
         </thead>
         <tbody>

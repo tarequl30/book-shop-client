@@ -12,6 +12,7 @@ import Orders from './Components/Orders/Orders';
 import Navbars from './Components/Navbar/Navbars'
 import { createContext } from 'react';
 import { useState } from 'react';
+import PrivateRoute from './Components/PrivateRoute/PrivateRoute';
 
 export const UserContext = createContext()
 function App() {
@@ -34,9 +35,9 @@ function App() {
           <Route path="/login">
             <Login />
           </Route>
-          <Route path="/orders">
+          <PrivateRoute path="/orders">
             <Orders />
-          </Route>
+          </PrivateRoute>
           <Route exact path="/">
             <Home />
           </Route>
